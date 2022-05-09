@@ -15,6 +15,7 @@ $ejercicios = array (
     array('id'=>10,'titulo'=>'Sopa de letras','descripcion'=>'Sopa de letras de 5 países','enlace'=>'./ejercicios/sopaLetras/index.php','repositorio'=>'https://github.com/a19sotean/RepasoServidorUd3/blob/main/ejercicios/sopaLetras/index.php'),
     array('id'=>11,'titulo'=>'Autentificacion basica','descripcion'=>'Usuario y contraseña con opción a guardar las credenciales mediante cookies.','enlace'=>'./ejercicios/cookies/ejercicioSimple.php','repositorio'=>'https://github.com/a19sotean/RepasoServidorUd3/blob/main/ejercicios/cookies/ejercicioSimple.php'),
     array('id'=>12,'titulo'=>'Test autoescuela','descripcion'=>'Ejercicio de los test de autoescuela del primer examen.','enlace'=>'./ejercicios/ud4repaso/testsAutoescuela/index.php','repositorio'=>'https://github.com/a19sotean/RepasoServidorUd3/blob/main/ejercicios/ud4repaso/testsAutoescuela'),
+    array('id'=>12,'titulo'=>'Puzzles infantiles','descripcion'=>'Puzzles de 2 piezas.','enlace'=>'./ejercicios/ud4repaso/puzles/index.php','repositorio'=>'https://github.com/a19sotean/RepasoServidorUd3/blob/main/ejercicios/ud4repaso/puzles'),
 );
 
 ?>
