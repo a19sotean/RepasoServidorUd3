@@ -20,6 +20,8 @@ namespace App\Models;
 
         private $id;
         private $palabra;
+        private $created_at;
+        private $updated_at;
 
         public function setPalabra($palabra) {
             $this->palabra = $palabra;
@@ -40,11 +42,10 @@ namespace App\Models;
         public function set() {
             $this->query = "INSERT INTO palabras(palabra)
                             VALUES(:palabra)";
-            // $this->parametros['id']=$id;
             $this->parametros['palabra']= $this->palabra;
             $this->get_results_from_query();
-            $this->id = $this->lastInsert();
-            // $this->execute_single_query();
+            // para relaciones 1-n n-m (ahora como hay una sola tabla no hace falta)
+            // $this->id = $this->lastInsert();
             $this->mensaje = 'Palabra añadida.';
         }
 
@@ -72,6 +73,21 @@ namespace App\Models;
                 
         }
 
+        public function getAll() {
+            $this->query = "SELECT * FROM palabras";
+            // Ejecutamos consulta que devuelve registros
+            $this->get_results_from_query();
+            if (count($this->rows) == 1) {
+                foreach ($this->rows[0] as $propiedad=>$valor) {
+                    $this->$propiedad = $valor;
+                }
+                $this->mensaje = 'Palabras encontradas';
+            } else {
+                $this->mensaje = 'Palabras no encontradas';
+            }
+            return $this->rows;
+        }
+
         public function edit() {
 
             $this->query = "
@@ -92,10 +108,39 @@ namespace App\Models;
             $this->query = "DELETE FROM palabras
             WHERE id = :id";
             $this->parametros['id']=$id;
+            $this->get_results_from_query();
             $this->mensaje = 'palabra eliminada';
         }
 
-        public function getAll() {}
+    //     public function delete($user_data = array())
+    // {
+    //     foreach ($user_data as $campo => $valor) {
+    //         $$campo = $valor;
+    //     }
+    //     $this->query = "DELETE FROM palabras WHERE id=:id";
+    //     $this->parametros['id'] = $id;
+    //     $this->get_results_from_query();
+    //     //echo $this->mensaje = 'palabra eliminada correctamente';
+    // }
+
+        public function getByNombre($filtro='') {
+            if($filtro != '') {
+                $palabra = "%" . $filtro . "%";
+                $this->query = "SELECT * FROM palabras WHERE (palabra LIKE :palabra)";
+                // Cargamos los parámetros
+                $this->parametros['palabra']=$palabra;
+
+                // Ejecutamos consulta que devuelve registros
+                $this->get_results_from_query();
+            }
+            if (count($this->rows) == 1) {
+                foreach ($this->rows[0] as $propiedad=>$valor) {
+                    $this->$propiedad = $valor;
+                }
+            } 
+            return $this->rows;
+        }
+
         public function read() {}
         public function readAll() {}
         public function insert() {}
