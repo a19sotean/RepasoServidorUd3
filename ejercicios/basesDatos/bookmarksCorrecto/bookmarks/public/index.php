@@ -19,7 +19,7 @@ $router = new Router();
 //Enrutamiento a la página de inicio
 $router->add(array(
     'name'=>'home',
-    'path'=>'/^\/$/',
+    'path'=>'/^\/?$/',
     'action'=>[HomeController::class, 'indexAction'],  
     'auth'=>["guest"]
 ));

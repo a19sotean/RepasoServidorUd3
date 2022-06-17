@@ -27,7 +27,7 @@ $router = new Router();
 
 $router->add(array(
     'name'=>'home',
-    'path'=>'/^\/$/',
+    'path'=>'/^\/?$/',
     'action'=>[PalabraController::class, 'IndexAction'],
     'auth'=>["admin", "invitado"]));
 
