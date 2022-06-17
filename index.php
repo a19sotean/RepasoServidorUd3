@@ -16,6 +16,9 @@ $ejercicios = array (
     array('id'=>11,'titulo'=>'Autentificacion basica','descripcion'=>'Usuario y contraseña con opción a guardar las credenciales mediante cookies.','enlace'=>'./ejercicios/cookies/ejercicioSimple.php','repositorio'=>'https://github.com/a19sotean/RepasoServidorUd3/blob/main/ejercicios/cookies/ejercicioSimple.php'),
     array('id'=>12,'titulo'=>'Test autoescuela','descripcion'=>'Ejercicio de los test de autoescuela del primer examen.','enlace'=>'./ejercicios/ud4repaso/testsAutoescuela/index.php','repositorio'=>'https://github.com/a19sotean/RepasoServidorUd3/blob/main/ejercicios/ud4repaso/testsAutoescuela'),
     array('id'=>12,'titulo'=>'Puzzles infantiles','descripcion'=>'Puzzles de 2 piezas.','enlace'=>'./ejercicios/ud4repaso/puzles/index.php','repositorio'=>'https://github.com/a19sotean/RepasoServidorUd3/blob/main/ejercicios/ud4repaso/puzles'),
+    array('id'=>13,'titulo'=>'BASE DATOS. Capitales','descripcion'=>'Ejercicio de la sopa de letras con base de datos','enlace'=>'./ejercicios/basesDatos/sopa_letras/public/index.php','repositorio'=>'https://github.com/a19sotean/RepasoServidorUd3/tree/main/ejercicios/basesDatos/sopa_letras'),
+    array('id'=>14,'titulo'=>'BASE DATOS. Bookmarks','descripcion'=>'Bookmarks en bases de datos','enlace'=>'./ejercicios/basesDatos/bookmarksCorrecto/bookmarks/public/index.php','repositorio'=>'https://github.com/a19sotean/RepasoServidorUd3/tree/main/ejercicios/basesDatos/bookmarksCorrecto/bookmarks'),
+    array('id'=>15,'titulo'=>'BASE DATOS. Encuestas','descripcion'=>'Encuestas en bases de datos','enlace'=>'./ejercicios/basesDatos/encuestasPreguntas/public/index.php','repositorio'=>'https://github.com/a19sotean/RepasoServidorUd3/tree/main/ejercicios/basesDatos/encuestasPreguntas')
 );
 
 ?>
